@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Prediksi Iris</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🌸 Bunga Iris</h2>
+
+    <img src="{{ url_for('static', filename='images/iris_cover.jpg') }}"
+         class="cover">
+
+    <p> Bunga Iris adalah tanaman hias yang dikenal dengan 
+        keindahan kelopaknya yang anggun dan warna yang beragam, 
+        seperti ungu, biru, kuning, putih, hingga kombinasi warna 
+        yang kontras. Nama Iris berasal dari bahasa Yunani yang 
+        berarti pelangi, melambangkan kekayaan warna yang dimiliki 
+        bunga ini.
+        Selain keindahannya, bunga iris juga memiliki makna simbolis 
+        yang kuat. Iris sering diasosiasikan dengan kebijaksanaan, 
+        harapan, kepercayaan, dan keberanian, sehingga banyak 
+        digunakan sebagai elemen dekoratif taman maupun simbol 
+        dalam seni dan budaya. Bunga ini tumbuh baik di daerah 
+        beriklim sedang hingga tropis, serta mudah beradaptasi 
+        di berbagai jenis lingkungan.
+        Dengan bentuknya yang elegan dan filosofi yang mendalam, 
+        bunga iris menjadi pilihan tepat untuk mempercantik taman, 
+        halaman rumah, maupun sebagai inspirasi visual yang menenangkan.
+        Bunga Iris merupakan dataset klasik dalam bidang
+        machine learning yang terdiri dari tiga spesies,
+        yaitu <b>Iris-setosa</b>, <b>Iris-versicolor</b>,
+        dan <b>Iris-virginica</b>.
+    </p>
+
+    <p>
+        Website ini dibuat untuk mengimplementasikan
+        algoritma <b>Artificial Neural Network (ANN)</b>
+        dalam mengklasifikasikan spesies bunga Iris
+        berdasarkan ukuran sepal dan petal.
+    </p>
+
+    <a href="/predict">
+        <button>🔍 Coba Prediksi</button>
+    </a>
+</div>
+
+</body>
+</html>

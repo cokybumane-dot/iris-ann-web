@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Iris</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Prediksi Spesies Iris</h2>
+
+    <form method="POST">
+        <label>Sepal Length (cm)</label>
+        <input type="number" step="0.01" name="sepal_length" required>
+
+        <label>Sepal Width (cm)</label>
+        <input type="number" step="0.01" name="sepal_width" required>
+
+        <label>Petal Length (cm)</label>
+        <input type="number" step="0.01" name="petal_length" required>
+
+        <label>Petal Width (cm)</label>
+        <input type="number" step="0.01" name="petal_width" required>
+
+        <button type="submit">Prediksi</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h3>Hasil: {{ prediction }}</h3>
+
+        <img src="{{ url_for('static', filename=image) }}">
+
+        <ul>
+            <li>Setosa: {{ probs[0] }}%</li>
+            <li>Versicolor: {{ probs[1] }}%</li>
+            <li>Virginica: {{ probs[2] }}%</li>
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <a href="/">
+        <button style="margin-top:10px;">⬅ Kembali</button>
+    </a>
+</div>
+
+</body>
+</html>
